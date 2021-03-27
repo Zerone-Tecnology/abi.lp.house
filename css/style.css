@@ -142,9 +142,34 @@ h3 {
   position: relative;
 }
 
+.block_wrap {
+  margin-top: 45px;
+}
+
 .block_wrap.s1 {
   background-image: url("../img/b2_bg.jpg");
   background-repeat: no-repeat;
   background-size: contain;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.block_wrap.s1 .content {
+  padding: 45px;
+  background-color: #fff;
+  margin-top: 45px;
+}
+
+.block_wrap.s1 .btn-arr {
+  margin-left: 15px;
+}
+
+.block_wrap.s1 .line-red {
+  height: 50px;
+  width: 100%;
+  left: -50%;
+  bottom: 0;
+  position: absolute;
+  background-color: #E31E24;
 }
 /*# sourceMappingURL=style.css.map */
