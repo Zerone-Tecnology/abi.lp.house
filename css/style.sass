@@ -1,0 +1,104 @@
+$accent: #E31E24
+$accent2: #1A1F26
+$accent3: #E7E7E7
+$text: #1A1F26
+
+body
+  color: $text
+  font-size: 16px
+  line-height: 1.6em
+  font-family: 'Roboto', sans-serif
+  margin: 0
+  padding: 0
+
+/* Works on Firefox */
+* 
+  scrollbar-width: thin
+  scrollbar-color: $accent2 $accent
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar 
+  width: 10px
+
+*::-webkit-scrollbar-track 
+  background: rgba($accent2, .11)
+
+*::-webkit-scrollbar-thumb 
+  background-color: rgba($accent2, .4)
+  border-radius: 20px  
+  
+a
+  color: $text
+  text-decoration: none
+ul
+  margin: 0
+  padding: 0
+  list-style-type: none
+  li
+    display: inline-block
+h1, h2, h3
+  font-family: 'Ubuntu', sans-serif
+  text-transform: uppercase
+  line-height: 1.2em
+h1
+  font-size: 55px
+h2
+  font-size: 36px
+h3
+  font-size: 19px
+.title
+  text-transform: uppercase
+  font-family: 'Roboto', sans-serif
+.btn
+  display: inline-block
+  padding: 15px 25px
+  border-radius: 4px
+  margin: 15px 0
+  text-transform: lowercase
+  &-red
+    background-color: $accent
+    color: #ffffff
+    a
+      color: #ffffff
+  &-arr
+    background-color: transparent
+    border: 2px solid $accent2
+.header
+  background-image: url('../img/header_bg.jpg')
+  background-size: cover
+  background-repeat: no-repeat
+  .logo-wrap
+    padding: 15px 0
+  .menu-wrap
+    padding: 15px 0
+    ul
+      margin: 15px 0
+      li a
+        display: block
+        padding: 15px
+  .phone-wrap
+    background: $accent
+    padding: 15px
+    color: #fff
+    a
+      color: #fff
+  .content
+    width: 60%
+    margin: 120px 0
+    .desc
+      background: rgba(255, 255, 255, 0.75)
+      backdrop-filter: blur(12px)
+      border-radius: 0px 2px 2px 0px
+      position: absolute
+      left: -50%
+      width: 100%
+      padding: 15px 15px 55px 50%
+    .btn
+      margin-top: 100px
+      z-index: 2
+      position: relative
+.block_wrap
+  &.s1
+    background-image: url('../img/b2_bg.jpg')
+    background-repeat: no-repeat
+    background-size: contain

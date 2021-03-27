@@ -1,0 +1,135 @@
+body {
+  color: #1A1F26;
+  font-size: 16px;
+  line-height: 1.6em;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1A1F26 #E31E24;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(26, 31, 38, 0.11);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(26, 31, 38, 0.4);
+  border-radius: 20px;
+}
+
+a {
+  color: #1A1F26;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+ul li {
+  display: inline-block;
+}
+
+h1, h2, h3 {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  line-height: 1.2em;
+}
+
+h1 {
+  font-size: 55px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 19px;
+}
+
+.title {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 25px;
+  border-radius: 4px;
+  margin: 15px 0;
+  text-transform: lowercase;
+}
+.btn-red {
+  background-color: #E31E24;
+  color: #ffffff;
+}
+.btn-red a {
+  color: #ffffff;
+}
+.btn-arr {
+  background-color: transparent;
+  border: 2px solid #1A1F26;
+}
+
+.header {
+  background-image: url("../img/header_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header .logo-wrap {
+  padding: 15px 0;
+}
+.header .menu-wrap {
+  padding: 15px 0;
+}
+.header .menu-wrap ul {
+  margin: 15px 0;
+}
+.header .menu-wrap ul li a {
+  display: block;
+  padding: 15px;
+}
+.header .phone-wrap {
+  background: #E31E24;
+  padding: 15px;
+  color: #fff;
+}
+.header .phone-wrap a {
+  color: #fff;
+}
+.header .content {
+  width: 60%;
+  margin: 120px 0;
+}
+.header .content .desc {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 0px 2px 2px 0px;
+  position: absolute;
+  left: -50%;
+  width: 100%;
+  padding: 15px 15px 55px 50%;
+}
+.header .content .btn {
+  margin-top: 100px;
+  z-index: 2;
+  position: relative;
+}
+
+.block_wrap.s1 {
+  background-image: url("../img/b2_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
