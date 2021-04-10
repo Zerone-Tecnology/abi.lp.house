@@ -42,21 +42,22 @@ ul li {
   display: inline-block;
 }
 
-h1, h2, h3 {
+h1, h2, h3, .h1, .h2, .h3 {
   font-family: 'Ubuntu', sans-serif;
   text-transform: uppercase;
   line-height: 1.2em;
+  font-weight: 700;
 }
 
-h1 {
+h1, .h1 {
   font-size: 55px;
 }
 
-h2 {
+h2, .h2 {
   font-size: 36px;
 }
 
-h3 {
+h3, .h3 {
   font-size: 19px;
 }
 
@@ -79,6 +80,24 @@ h3 {
 }
 
 .btn-red a {
+  color: #ffffff;
+}
+
+.btn-grey {
+  background-color: #E7E7E7;
+  color: #000;
+}
+
+.btn-grey a {
+  color: #000;
+}
+
+.btn-grey:hover {
+  background-color: #E31E24;
+  color: #ffffff;
+}
+
+.btn-grey:hover a {
   color: #ffffff;
 }
 
@@ -172,4 +191,15 @@ h3 {
   position: absolute;
   background-color: #E31E24;
 }
-/*# sourceMappingURL=style.css.map */
+
+.block_wrap.s2 .block {
+  border: 1px solid #E9E9E9;
+  border-radius: 2px;
+  padding: 50px;
+  margin: 15px 0;
+}
+
+.block_wrap.s2 .block .price {
+  font-weight: 700;
+  font-style: 21px;
+}

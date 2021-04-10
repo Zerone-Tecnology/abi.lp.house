@@ -36,15 +36,16 @@ ul
   list-style-type: none
   li
     display: inline-block
-h1, h2, h3
+h1, h2, h3, .h1, .h2, .h3
   font-family: 'Ubuntu', sans-serif
   text-transform: uppercase
   line-height: 1.2em
-h1
+  font-weight: 700
+h1, .h1
   font-size: 55px
-h2
+h2, .h2
   font-size: 36px
-h3
+h3, .h3
   font-size: 19px
 .title
   text-transform: uppercase
@@ -60,6 +61,16 @@ h3
     color: #ffffff
     a
       color: #ffffff
+  &-grey
+    background-color: $accent3
+    color: #000
+    a
+      color: #000
+    &:hover
+      background-color: $accent
+      color: #ffffff
+      a
+        color: #ffffff
   &-arr
     background-color: transparent
     border: 2px solid $accent2
@@ -118,3 +129,12 @@ h3
       bottom: 0
       position: absolute
       background-color: $accent
+  &.s2
+    .block
+      border: 1px solid #E9E9E9
+      border-radius: 2px
+      padding: 50px
+      margin: 15px 0
+      .price
+        font-weight: 700
+        font-style: 21px
