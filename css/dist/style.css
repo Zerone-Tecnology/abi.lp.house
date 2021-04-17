@@ -105,7 +105,7 @@ h3, .h3 {
   width: 25px;
   height: 45px;
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 10px;
 }
 .social .in {
   background-position: -305px 0;
@@ -115,6 +115,11 @@ h3, .h3 {
 }
 .social .fb {
   background-position: -408px 0;
+}
+.social a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .header {
@@ -343,9 +348,6 @@ h3, .h3 {
   background-color: #fff;
   margin-top: 45px;
 }
-.block_wrap.s6 .content .social a {
-  display: block;
-}
 .block_wrap.s7 {
   background-image: url("../img/s8_bg.jpg");
   background-repeat: no-repeat;
@@ -387,11 +389,14 @@ h3, .h3 {
 .footer ul.phones li {
   display: block;
 }
+.footer ul.social {
+  margin-top: 50px;
+}
 .footer ul.social .in {
   background-position: -160px 0;
 }
 .footer ul.social .wa {
-  background-position: -215px 0;
+  background-position: -216px 0;
 }
 .footer ul.social .fb {
   background-position: -263px 0;
