@@ -73,7 +73,7 @@ h3, .h3
         color: #ffffff
   &-arr
     background-color: transparent
-    border: 2px solid $accent2
+    border: 1px solid $accent2
 .social
   li
     background-image: url('../img/sprite_main.svg')
@@ -182,7 +182,126 @@ h3, .h3
       .price
         font-weight: 700
         font-style: 21px
-    // .block-calc
+    .block-calc
+      display: flex
+      flex-direction: column
+      flex: 1
+      padding: 52px 50px 60px 50px
+      justify-content: center
+      text-align: center
+      font-family: 'Roboto', sans-serif
+
+
+      .title
+        margin: 0 auto
+      
+      #type_w
+        color: white
+        background-color: $accent2
+        font-size: 16px
+        text-align: center
+        padding: 16px
+        cursor: pointer
+
+      .range-wrapper
+        position: relative
+        width: 100%
+        input[type="range"]
+          width: 100%
+          height: 6px
+          -webkit-appearance: none
+          z-index: 9999
+        input[type="range"]:focus
+          outline: none
+        input[type="range"] + label 
+          position: absolute
+          bottom: -34px
+          left: 37px
+          width: 80px
+          text-align: center
+
+          
+        input[type="range"]::-webkit-slider-runnable-track 
+          width: 10%
+          cursor: pointer
+          height: 5px
+        input[type="range"]::-webkit-slider-thumb 
+          -webkit-appearance: none
+          height: 24px
+          width: 24px
+          background: $accent2
+          border-radius: 50%
+          margin-top: -10px 
+          cursor: pointer
+        .kv-range-gradient 
+          pointer-events: none
+          position: absolute
+          top: 14px
+          width: 100%
+          margin: 0 auto
+          height: 4px
+          background: linear-gradient(90deg, #1A1F26 30%, rgba(26, 31, 38, 0.23) 30%)
+          border-radius: 8px
+      .kv 
+        &-wrapper
+          display: flex
+          flex-direction: row
+          flex-wrap: wrap
+          justify-content: space-between
+          margin-top: 24px
+        &-selector
+          border: 1px solid #E9E9E9
+          width: 80px
+          height: 45px
+          display: flex
+          align-items: center
+          justify-content: center
+          font-size: 16px
+          margin-top: 2%
+          cursor: pointer
+
+        &-range-floated
+          background: #ffffff
+        &-range-left-number
+          position: absolute
+          left: 0
+          font-size: 14px
+          font-weight: 300
+        &-range-right-number
+          position: absolute
+          right: 0
+          font-size: 14px
+          font-weight: 300
+      .opt
+        &-wrapper 
+          display: flex
+          flex-direction: column
+          flex: 1
+        &-selector
+          border: 1px solid #E9E9E9
+          width: 100%
+          padding: 10px
+          text-align: center
+          font-weight: 400
+          margin-bottom: 20px
+          cursor: pointer
+      .sum
+        &-wrapper
+          width: 100%
+          
+          display: inline-flex
+          justify-content: space-between
+          .btn
+            padding: 10px 18px
+            font-weight: 700
+        &-result
+          padding: 15px
+          display: flex
+          justify-content: center
+          align-items: center
+          font-weight: 700
+
+
     //   #type_w
   &.s3
     .block
@@ -314,3 +433,23 @@ h3, .h3
       background-position: -216px 0
     .fb
       background-position: -263px 0
+.hidden
+  display: none
+
+.font-light
+  font-family: 'Roboto', sans-serif
+  font-weight: 300
+
+
+.selector
+  &:hover
+    border: 1px solid $accent2 !important
+    transition: border 0.4s linear
+  &.selected
+    border: 1px solid $accent2 !important
+    background: $accent2 !important
+    color: #ffffff
+    transition: (border,color,backgroud) 0.4s linear
+
+
+
