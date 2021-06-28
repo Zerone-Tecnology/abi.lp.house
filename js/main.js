@@ -177,6 +177,7 @@ $(document).ready(function () {
 	// Отрисовка результата в "ОНЛАЙН КАЛЬКУЛЯТОР"
 	$('.kv-selector').on('click', function () {
 		$('.kv-selector.selected').removeClass('selected')
+		$('.opt-selector.selected').removeClass('selected')
 		$(this).addClass('selected')
 
 		const kv_value = $(this)[0].dataset.value;
@@ -186,6 +187,7 @@ $(document).ready(function () {
 	// Отрисовка результата в "ОНЛАЙН КАЛЬКУЛЯТОР"
 	$('#kv-range').on('input', function () {
 		$('.kv-selector.selected').removeClass('selected')
+		$('.opt-selector.selected').removeClass('selected')
 		calculate.set($(this).val(), 1);
 	})
 	// Отрисовка результата в "ОНЛАЙН КАЛЬКУЛЯТОР"
