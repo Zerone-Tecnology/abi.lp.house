@@ -89,14 +89,13 @@ $(document).ready(function () {
 
 
 
-
+	// Отрисовка ползунка в "ОНЛАЙН КАЛЬКУЛЯТОР"
 	const range = document.getElementById("kv-range");
-
-	// https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
+	// Отрисовка ползунка в "ОНЛАЙН КАЛЬКУЛЯТОР"
 	const scale = (num, in_min, in_max, out_min, out_max) => {
 		return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
 	};
-
+	// Отрисовка ползунка в "ОНЛАЙН КАЛЬКУЛЯТОР"
 	range.addEventListener("input", (e) => {
 		const value = +e.target.value;
 		const label = e.target.nextElementSibling;
@@ -121,118 +120,35 @@ $(document).ready(function () {
 
 
 
-	let _calc = {
-		kv_list: {
-			1: {
-				price: 1500,
-				kv: 30
-			},
-			2: {
-				price: 1500,
-				kv: 35
-			},
-			3: {
-				price: 1500,
-				kv: 36
-			},
-			4: {
-				price: 1500,
-				kv: 42
-			},
-			5: {
-				price: 1500,
-				kv: 47
-			},
-			6: {
-				price: 1500,
-				kv: 54
-			},
-			7: {
-				price: 1500,
-				kv: 64
-			},
-			8: {
-				price: 1500,
-				kv: 72
-			},
-			9: {
-				price: 1500,
-				kv: 81
-			},
-			10: {
-				price: 1500,
-				kv: 90
-			},
-			11: {
-				price: 1500,
-				kv: 100
-			},
-			12: {
-				price: 1500,
-				kv: 200
-			},
-		},
-		work_price: {
-			1: {
-				price: 1500,
-			},
-			2: {
-				price: 1500,
-			},
-			3: {
-				price: 1500,
-			},
-			4: {
-				price: 1500,
-			},
-			5: {
-				price: 1500,
-			},
-			6: {
-				price: 1500,
-			},
-			7: {
-				price: 1500,
-			},
-			8: {
-				price: 1500,
-			},
-			9: {
-				price: 1500,
-			},
-			10: {
-				price: 1500,
-			},
-			11: {
-				price: 1500,
-			},
-			12: {
-				price: 1500,
-			},
-		},
-		work_selected: 1,
-		kv_selected: 0,
-		rprice: 0,
-		kv_selected: 0,
 
-		setKV(number, fromData = false) {
-			if (fromData == true) {
-				this.kv_selected = this.kv_list[number].kv
-			}
-			else {
-				this.kv_selected = number
-			}
+	// Отрисовка результата в "ОНЛАЙН КАЛЬКУЛЯТОР"
+	const calculate = {
+		work: [
+			{ number: 1, price: 1500 },
+			{ number: 2, price: 6000 },
+			{ number: 3, price: 15000 },
+			{ number: 4, price: 10000 },
+			{ number: 5, price: 10000 },
+			{ number: 6, price: 1500 },
+			{ number: 7, price: 10000 },
+			{ number: 8, price: 1 },
+			{ number: 9, price: 1 },
+			{ number: 10, price: 1 },
+			{ number: 11, price: 1 },
+			{ number: 12, price: 1 },
+		],
 
-
-			this.calcSelected(fromData)
-		},
-		calcSelected(fromData = false) {
-			this.rprice = this.kv_selected * this.work_price[this.work_selected].price;
-			this.draw(this.rprice)
+		getCalculated(kv_selected, work_id = 1) {
+			this.kv_value = parseInt(kv_selected) * this.getWork(work_id).price
 		},
 
-		draw(number) {
-			$('.sum-result').text(`${this.formatCurrency(number)} тг`)
+		getWork(number) {
+			console.log(this.work.find(w => w.number === number))
+			return this.work.find(w => w.number === number)
+		},
+
+		draw(price) {
+			$('.sum-result').text(`${this.formatCurrency(price)} тг`)
 		},
 
 		formatCurrency(number) {
@@ -240,20 +156,48 @@ $(document).ready(function () {
 			var n2 = n.replace(/\d\d\d(?!$)/g, "$& ");
 			return n2.split('').reverse().join('');
 		},
+
+		set(kv_selected, work_id) {
+			this.getCalculated(kv_selected, work_id)
+			this.draw(this.kv_value)
+		},
+
+		plus(val) {
+			let price = parseInt($('.sum-result').text().replace(/\s/g, '').slice(0, -2));
+			price = price + parseInt(val);
+			this.draw(price)
+		},
+
+		minus(val) {
+			let price = parseInt($('.sum-result').text().replace(/\s/g, '').slice(0, -2));
+			price = price - parseInt(val);
+			this.draw(price)
+		}
 	}
-
-
-
+	// Отрисовка результата в "ОНЛАЙН КАЛЬКУЛЯТОР"
 	$('.kv-selector').on('click', function () {
 		$('.kv-selector.selected').removeClass('selected')
 		$(this).addClass('selected')
 
-		_calc.setKV(parseInt($(this).attr('id')), true);
+		const kv_value = $(this)[0].dataset.value;
+
+		calculate.set(kv_value, 1);
 	})
-
-
+	// Отрисовка результата в "ОНЛАЙН КАЛЬКУЛЯТОР"
 	$('#kv-range').on('input', function () {
-		_calc.setKV(parseInt($(this).val()));
+		$('.kv-selector.selected').removeClass('selected')
+		calculate.set($(this).val(), 1);
+	})
+	// Отрисовка результата в "ОНЛАЙН КАЛЬКУЛЯТОР"
+	$('.opt-selector').on('click', function () {
+		if ($(this).hasClass('selected')) {
+			calculate.plus($(this)[0].dataset.price)
+			$(this).removeClass('selected')
+		}
+		else {
+			calculate.minus($(this)[0].dataset.price)
+			$(this).addClass('selected')
+		}
 	})
 
 });
