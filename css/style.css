@@ -7,6 +7,8 @@ body {
   padding: 0;
 }
 
+
+
 /* Works on Firefox */
 * {
   scrollbar-width: thin;
@@ -435,6 +437,9 @@ h3, .h3 {
   text-align: center;
 }
 
+
+/*FOOTER==========================================================*/
+
 .footer {
   background: #1A1F26;
   color: #ffffff;
@@ -475,3 +480,5 @@ h3, .h3 {
 .footer ul.social .fb {
   background-position: -263px 0;
 }
+
+
