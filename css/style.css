@@ -41,7 +41,7 @@ ul {
 }
 
 ul li {
-  display: inline-block;
+    display: inline-block;
 }
 
 h1, h2, h3, .h1, .h2, .h3 {
@@ -67,13 +67,30 @@ h3, .h3 {
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
 }
+form.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
+input[type="text"] {
+  padding: 10px;
+  margin: 10px 0;
+  border: unset;
+  border-bottom: 2px solid #e3e3e3;
+}
 .btn {
   display: inline-block;
-  padding: 15px 25px;
-  border-radius: 4px;
-  margin: 15px 0;
-  text-transform: lowercase;
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 15px 0;
+    text-transform: lowercase;
+    cursor: pointer;
+}
+.btn:hover {
+  box-shadow: 0px 11px 20px 5px rgb(238 62 24 / 9%);
 }
 
 .btn-red {
@@ -216,7 +233,7 @@ h3, .h3 {
 .block_wrap.s1 .line-red {
   height: 50px;
   width: 100%;
-  left: -50%;
+  left: -49%;
   bottom: 0;
   position: absolute;
   background-color: #E31E24;
@@ -457,7 +474,7 @@ h3, .h3 {
   width: 35px;
   height: 45px;
   display: inline-block;
-  margin-right: 15px;
+  margin-right: 100px;
   padding-left: 50px;
 }
 
@@ -466,7 +483,7 @@ h3, .h3 {
 }
 
 .footer ul.social {
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .footer ul.social .in {
@@ -480,5 +497,28 @@ h3, .h3 {
 .footer ul.social .fb {
   background-position: -263px 0;
 }
-
-
+.block.block-center ul li {
+  display: inline-block;
+  padding: 0 15px;
+}
+.left_b {
+  width: 20%;
+}
+.center_b {
+  width: 55%;
+}
+.zerone {
+  position: relative;
+  text-align: center;
+  top: 175px;
+}
+.zerone img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.block.block-left .logo {
+  padding-bottom: 10px;
+}
+.block.block-left .copy {
+  padding-top: 10px;
+}
