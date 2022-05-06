@@ -65,12 +65,30 @@ h3, .h3 {
   font-family: "Roboto", sans-serif;
 }
 
+form.form {
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin: 10px 0;
+  border: unset;
+  border-bottom: 2px solid #e3e3e3;
+}
 .btn {
   display: inline-block;
-  padding: 15px 25px;
-  border-radius: 4px;
-  margin: 15px 0;
-  text-transform: lowercase;
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 15px 0;
+    text-transform: lowercase;
+    cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.5px;
 }
 .btn-red {
   background-color: #E31E24;
