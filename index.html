@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="css/style.css"?v=1.0>
   <link rel="stylesheet" href="css/adaptive.css">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="css/lightbox.min.css">
 </head>
 <body>
 
@@ -534,12 +535,12 @@
         <div class="col-12">
           <h2 id="our_certificate">Наши сертификаты</h2>
           <div class="slider owl-carousel">
-            <img src="img/certificate/1.jpg" alt="cert 1">
-            <img src="img/certificate/2.jpg" alt="cert 2">
-            <img src="img/certificate/3.jpg" alt="cert 3">
-            <img src="img/certificate/4.jpg" alt="cert 4">
-            <img src="img/certificate/5.jpg" alt="cert 5">
-            <img src="img/certificate/6.jpg" alt="cert 6">
+            <a  href="img/certificate/1.jpg" data-lightbox="imagegroup"><img src="img/certificate/1.jpg" alt="cert 1"></a>
+            <a href="img/certificate/2.jpg" data-lightbox="imagegroup"><img src="img/certificate/2.jpg" alt="cert 1"></a>
+            <a href="img/certificate/3.jpg" data-lightbox="imagegroup"><img src="img/certificate/3.jpg" alt="cert 1"></a>
+            <a href="img/certificate/4.jpg" data-lightbox="imagegroup"><img src="img/certificate/3.jpg" alt="cert 1"></a>
+            <a href="img/certificate/5.jpg" data-lightbox="imagegroup"><img src="img/certificate/3.jpg" alt="cert 1"></a>
+            <a href="img/certificate/6.jpg" data-lightbox="imagegroup"><img src="img/certificate/3.jpg" alt="cert 1"></a>
           </div>
         </div>
       </div>
@@ -551,11 +552,11 @@
         <div class="col-12">
           <h2>Нас рекомендуют</h2>
           <div class="slider owl-carousel">
-            <img src="img/rec/1.jpg" alt="cert 1">
-            <img src="img/rec/2.jpg" alt="cert 2">
-            <img src="img/rec/3.jpg" alt="cert 3">
-            <img src="img/rec/4.jpg" alt="cert 4">
-            <img src="img/rec/5.jpg" alt="cert 5">
+            <a  href="img/rec/1.jpg" data-lightbox="imagegroup"><img src="img/rec/1.jpg" alt="cert 1"></a>
+            <a  href="img/rec/2.jpg" data-lightbox="imagegroup"><img src="img/rec/2.jpg" alt="cert 1"></a>
+            <a  href="img/rec/3.jpg" data-lightbox="imagegroup"><img src="img/rec/3.jpg" alt="cert 1"></a>
+            <a  href="img/rec/4.jpg" data-lightbox="imagegroup"><img src="img/rec/4.jpg" alt="cert 1"></a>
+            <a  href="img/rec/5.jpg" data-lightbox="imagegroup"><img src="img/rec/5.jpg" alt="cert 1"></a>
           </div>
         </div>
       </div>
@@ -626,5 +627,14 @@
 <script src="libs/owlcarousel/owl.carousel.min.js"></script>
 <script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/lightbox.min.js"></script>
+<script src="https://kit.fontawesome.com/7773dc1cdf.js" crossorigin="anonymous"></script>
+    <script>
+      lightbox.option({
+        'resizeDuration': 100,
+        'disableScrolling': true,
+        'alwaysShowNavOnTouchDevices': true,
+      })
+    </script>
 </body>
 </html>
