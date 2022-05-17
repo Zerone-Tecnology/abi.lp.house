@@ -2,8 +2,11 @@ $(document).ready(function () {
 	new WOW().init();
 	$('.slider').owlCarousel({
 		nav: true,
-		navText: '',
+		navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
 		items: 1,
+		center: true,
+		onInitialized  : counter, 
+  		onTranslated : counter,
 		responsive: {
 			425: {
 				items: 2,
@@ -12,8 +15,9 @@ $(document).ready(function () {
 				items: 3,
 			},
 			1024: {
-				items: 4
-			}
+				items: 3
+			},
+			
 		}
 	});
 
@@ -57,6 +61,8 @@ $(document).ready(function () {
 		});
 		return false;
 	});
+
+	
 
 	// window.onscroll = function() {fixMMenu()};
 	// var header = document.getElementById("headerTop");
@@ -276,3 +282,16 @@ function burgerMenu(selector) {
   }
   
   burgerMenu('.burger-menu');
+
+  
+  function counter(event) {
+	var element   = event.target;         // DOM element, in this example .owl-carousel
+	 var items     = event.item.count;     // Number of items
+	 var item      = event.item.index + 1;     // Position of the current item
+   
+   // it loop is true then reset counter from 1
+   if(item > items) {
+	 item = item - items
+   }
+   $('#counter').html("<span class='counter-span-1'>0"+item+"</span>"+" / "+"<span class='counter-span-2'>0" +items+"</span>")
+ }
