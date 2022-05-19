@@ -428,6 +428,8 @@ input[type='text'] {
 	margin: 15px auto 25px;
 }
 
+
+
 .block_wrap.s5 .block .icon-1 {
 	background-position: 0 -240px;
 }
@@ -467,6 +469,7 @@ input[type='text'] {
 }
 
 .block_wrap.s6 .content {
+	right: 50px;
 	padding: 45px;
 	background-color: #fff;
 	margin-top: 45px;
@@ -568,7 +571,6 @@ input[type='text'] {
 /*WHY US
 =================================================*/
 .block_wrap.s1 .content h2{
-	white-space: nowrap;
 	padding-bottom: 20px;
 }
 
@@ -606,7 +608,8 @@ input[type='text'] {
 }
 
 .block_wrap.s4 .content h2{
-    width: 430px;
+    max-width: 430px;
+	width: 100%;
     padding-bottom: 25px;
 }
 
@@ -631,13 +634,8 @@ input[type='text'] {
     padding-bottom: 30px;
 }
 
-.block_wrap.s6 .col-5:first-child{
-    margin-right: 50px;
-}
-
 .col-5 p {
     padding-bottom: 26px;
-    width: 270px;
 }
 
 .col-5 h3{
@@ -676,7 +674,7 @@ input[type='text'] {
 
 .owl-nav{
     position: absolute;
-    left: -380px;
+    left: -50%;
     top: 200px;
 }
 
