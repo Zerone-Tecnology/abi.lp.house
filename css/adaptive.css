@@ -502,6 +502,10 @@
     display: block;
   }
 
+  #header-phone{
+    display: none;
+  }
+
   
 
   
@@ -752,6 +756,7 @@
 }
 
 @media (max-width: 526px){
+
   .block_wrap.s6 .row{
     justify-content: center;
   }
@@ -1060,6 +1065,7 @@
 }
 
 @media (max-width: 426px){
+
   .sale-h1, .sale-p, .sale-time{
     max-width: 300px;
     width: 100%;
