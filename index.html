@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="css/style.css"?v=1.0>
   <link rel="stylesheet" href="css/adaptive.css">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="css/style-new.css">
 </head>
 <body>
 
@@ -33,10 +34,20 @@
               <span class="burger-menu_lines"></span>
             </a>
             <nav class="burger-menu_nav">
+              <img src="img/logo_abi.png" alt="">
+
               <a href="#services" class="burger-menu_link">Услуги</a>
               <a href="#choose" class="burger-menu_link">Преимущество</a>
               <a href="#working" class="burger-menu_link">Этапы работы с нами</a>
               <a href="#contacts" class="burger-menu_link">Контакты</a>
+              
+              <div class="phone-burger"><i class="fa fa-phone"></i><a href="tel:+77078183480">+7 707 818 34 80</a></div>
+
+              <ul class="social">
+                <li class="in"><a href="https://www.instagram.com/abigroupkz/"></a></li>
+                <li class="wa"><a href="tel:+77078183480"></a></li>
+                <li class="fb"><a href="https://www.facebook.com/abigroupkz"></a></li>
+              </ul>
             </nav>
             <div class="burger-menu_overlay"></div>
           </div>
@@ -53,7 +64,7 @@
         <div class="col-2">
           <div class="phone-wrap">
             <ul>
-              <li><a href="tel:+77078183480">+7 707 818 34 80</a></li>
+              <li><i class="fa fa-phone"></i><a href="tel:+77078183480">+7 707 818 34 80</a></li>
             </ul>
           </div>
         </div>
@@ -69,6 +80,26 @@
       </div>
     </div>
   </div>
+
+  <div class="sale">
+    <div class="container">
+      <div class="sale__inner">
+        <div class="text-content">
+          <h1 class="sale-h1">Акция!</h1>
+          <p class="sale-p"><span class="sale-span">Получите оптовую скидку</span>
+            <br />на стройматериалы приобретаемые<br />
+            <span class="sale-span">у наших партнеров</span>
+            <div class="sale-time">
+              <script src="//megatimer.ru/get/b3ec142dcd3c61d9492bc99498546f05.js"></script>
+            </div>
+            <p class="sale-p">до окончания акции</p>
+            <a href="#callback" class="btn btn-red">подрабнее об акций</a>
+        </div>
+        <img src="img/Rectangle 489.png" alt="">
+      </div>
+    </div>
+  </div>
+
   <div class="block_wrap s1">
     <div class="container">
       <div class="row">
@@ -238,6 +269,153 @@
       </div>
     </div>
   </div>
+
+  <div class="block_wrap s2 adaptive">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 id="services">Так что же именно мы вам предлагаем?</h2>
+          <div class="calculate">
+            <div id="myModal" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="col-4">
+                  <div class="col-12 block block-calc">
+                    <div class="title h3" id="calculator">Онлайн калькулятор</div>
+                        <div class="work-type">
+                              <label for="type_w" class="font-light mt-3">Тип работ</label>
+                              <div name="type_w" id="type_w" class=" mt-2">
+                                <span value="Земляные работы ">Земляные работы</span>
+                              </div> 
+                              <label for="type_range" class="font-light mt-4">Площадь дома кв.м</label>
+                              <div class="range-wrapper mt-1">
+                                <input id="kv-range" type="range" min="50" max="400" step="1" value="150" name="type_range">
+                                <label for="type_range" class="kv-range-floated">150</label>
+                                <label for="type_range" class="kv-range-left-number">50</label>
+                                <label for="type_range" class="kv-range-right-number">400</label>
+                                <div class="kv-range-gradient"></div>
+                              </div>
+                              <div class="row  mt-4">
+                                <div class="col-lg-12 kv-wrapper">
+                                  <span id="1"  class="kv-selector selector" data-value="30">5 х 6</span>
+                                  <span id="2"  class="kv-selector selector" data-value="35">5 х 7</span>
+                                  <span id="3"  class="kv-selector selector" data-value="36">6 х 6</span>
+                                  <span id="4"  class="kv-selector selector" data-value="42">6 х 7</span>
+                                  <span id="5"  class="kv-selector selector" data-value="47">7 х 7</span>
+                                  <span id="6"  class="kv-selector selector" data-value="54">7 х 8</span>
+                                  <span id="7"  class="kv-selector selector" data-value="64">8 х 8</span>
+                                  <span id="8"  class="kv-selector selector" data-value="72">8 х 9</span>
+                                  <span id="9"  class="kv-selector selector" data-value="81">9 х 9</span>
+                                  <span id="10" class="kv-selector selector" data-value="90">9 х 10</span>
+                                  <span id="11" class="kv-selector selector" data-value="100">10 х 10</span>
+                                  <span id="12" class="kv-selector selector" data-value="0">до 200</span>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="work-type">
+                            <label for="opt" class="font-light mt-4">Дополнительно</label>
+                
+                            <div class="opt-wrapper mt-3">
+                              <span class="opt-selector selector" data-price="7850">Авторский надзор</span>
+                              <span class="opt-selector selector" data-price="9800">Технадзор</span>
+                              <span class="opt-selector selector" data-price="12000">Экспертиза и испытания</span>
+                            </div>
+                            <!-- <input type="checkbox" name="opt" id="Авторский надзор">Авторский надзор
+                            <input type="checkbox" name="opt" id="Технадзор">Технадзор
+                            <input type="checkbox" name="opt" id="Экспертиза и испытания">Экспертиза и испытания -->
+                            <div class="sum-wrapper">
+                              <a href="javascript:void(0)" class="btn btn-arr mt-3">рассчитать</a>
+                              <span  class="sum-result">2 500 900 тг</span>
+                            </div>
+                            <a href="javascript:void(0)" class="btn btn-red mt-1">отправить заявку</a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+          </div>
+            <a id="myBtn" href="#"><i class="fa fa-calculator"></i></a>
+          </div>
+        </div>
+        <div class="col-8">
+            <div class="slider-sale owl-carousel">
+              <div class="col-6">
+                <div class="block icon icon-1 b1">
+                <div class="title h3">Земляные работы</div>
+                <p>Разработка котлована под фундамент</p>
+                <div class="price">от 1 500 тг/куб</div>
+                <a href="#" class="btn btn-grey">заказать услугу</a>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="block icon icon-2 b2">
+                <div class="title h3">Заливка фундамента</div>
+                <p>Заливка фундамента</p>
+                <p>Обратная засыпка фундамента</p>
+                <div class="price">от 6 000 тг/куб</div>
+                <a href="#" class="btn btn-grey">заказать услугу</a>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="block icon icon-3 b3">
+                <div class="title h3">Монолитная работа</div>
+                <p>Заливка бетоном ригеля </p>
+                <p>Заливка плит</p>
+                <div class="price">от 15 000 тг/куб</div>
+                <a href="#" class="btn btn-grey">заказать услугу</a>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="block icon icon-4 b4">
+                <div class="title h3">Инженерные работы</div>
+                <p>Электромонтажные работы </p>
+                <p>Сантехнические работы</p>
+                <div class="price">от 10 000 тг</div>
+                <a href="#" class="btn btn-grey">заказать услугу</a>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="block icon icon-5 b5">
+                <div class="title h3">Кладка стен</div>
+                <p>Кирпичные</p>
+                <p>Теплоблочные</p>
+                <p>Газоблочные</p>
+                <p>Блочные</p>
+                <div class="price">от 10 000 тг/куб</div>
+                <a href="#" class="btn btn-grey">заказать услугу</a>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="block icon icon-6 b6">
+                <div class="title h3">Работы по кровле</div>
+                  <p>Шифер асбестоцементный</p>
+                  <p>Профнастил</p>
+                  <p>Металлочерепица</p>
+                  <p>Битумная черепица</p>
+                  <p>Ондулинф</p>
+                <div class="price">от 1 500 тг/кв.м</div>
+                <a href="#" class="btn btn-grey">заказать услугу</a>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="block icon icon-7 b7">
+                  <div class="title h3">Отделочные работЫ</div>
+                    <p>Наружные </p>
+                    <p>Внутренние </p>
+                    <p>Травентин</p>
+                    <p>Левкас</p>
+                    <p>Покраска</p>
+                  <div class="price">от 10 000 тг</div>
+                  <a href="#" class="btn btn-grey">заказать услугу</a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="block_wrap s3">
     <div class="container">
       <div class="row">
@@ -304,65 +482,6 @@
         </div>
 
       </div>
-
-
-      <div class="slider-card owl-carousel">
-        <div class="col-4">
-          <div class="block">
-            <div class="icon icon-1"></div>
-            <div class="title h3">Мы даем гарантии</div>
-            <p>У вас есть целый год, чтобы удостовериться в качестве нашей работы и профессионализме мастеров. Мы применяем качественные материалы, чтобы избавить вас от отслаивающегося покрытия, треснувшей штукатурки или подтекающей сантехники</p>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="block">
-            <div class="icon icon-2"></div>
-            <div class="title h3">Мы строго соблюдаем нормы</div>
-            <p>Все по строительным нормам (СНиП) и гос. стандартам (ГОСТ). Наши мастера следуют всем правилам при выравнивании стен, полови потолков, монтаже чистовых материалов. По желанию мы предоставим Вам фото- видеозаписи проведения работ, закрываемых под отделкой</p>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="block">
-            <div class="icon icon-3"></div>
-            <div class="title h3">У нас в команде только профи</div>
-            <p>Попасть к нам через связи не получится. Мы доверяем ваш ремонт только специалистам с опытом более 5 лет. Они трудятся организованно, без частых перекуров и болтовни в рабочее время</p>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="block">
-            <div class="icon icon-4"></div>
-            <div class="title h3">Мы ничего не скрываем</div>
-            <p>За вашим проектом закреплен менеджер. Он ваш личный помощник, которого вы можете расспрашивать о каждом этапе работы и запрашивать фото-видео каждого рабочего этапа</p>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="block">
-            <div class="icon icon-5"></div>
-            <div class="title h3">Нам не надо доплачивать «сверху»</div>
-            <p>Расходы в смете фиксированы. Поэтому за неучтенный кафель или паркет мы отвечаем сами. И этот пункт прописан в договоре крупным шрифтом и без звездочки*</p>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="block">
-            <div class="icon icon-6"></div>
-            <div class="title h3">Нам не все равно!</div>
-            <p>Мы дорожим своей репутацией и отвечаем за каждый квадратный метр. Качество превыше всего! </p>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="block">
-            <div class="icon icon-7"></div>
-            <div class="title h3">Мы соблюдаем сроки</div>
-            <p>Обговариваем реальные, а не продающие сроки. И в обещанный день ключи от квартиры с готовым ремонтом будут у вас</p>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="block">
-            <div class="icon icon-8"></div>
-            <div class="title h3">У нас большой опыт</div>
-            <p>Можно, мы снова напомним вам о нашем опыте? Более 500 довольных клиентов – это уже серьезно! </p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -372,13 +491,13 @@
     <div class="container">
       <div class="row">
         <div class="col-7">
-          <div class="content">
-            <h2>Еще мы можем вас порадовать…</h2>
-            <div class="desc">
-              <p>Оптовой скидкой в 15 % на стройматериалы от наших партнеров: гипермаркетов строительных материалов «Комфорт» и «Baumarkt».  Будьте уверены, они не обманут нас, заменив высококачественную немецкую штукатурку на дешевую китайскую! Бесплатной доставкой строительных материалов</p>
+          <div class="content content-black">
+              <h2>Еще мы можем вас порадовать…</h2>
+              <div class="desc">
+                <p>Оптовой скидкой в 15 % на стройматериалы от наших партнеров: гипермаркетов строительных материалов «Комфорт» и «Baumarkt».  Будьте уверены, они не обманут нас, заменив высококачественную немецкую штукатурку на дешевую китайскую! Бесплатной доставкой строительных материалов</p>
+                </div>
+                <a href="#callback" class="btn btn-red">Оставить заявку</a>
               </div>
-              <a href="#callback" class="btn btn-red">Оставить заявку</a>
-            </div>
           </div>
       </div>
     </div>
@@ -433,50 +552,7 @@
         </div>
 
       </div>
-      <div class="slider-card owl-carousel">
-        <div class="col-4 ">
-          <div class="block block-1">
-            <div class="icon icon-1"></div>
-            <div class="h3 title">ДОГОВОР</div>
-            <p>Утверждаем стоимость работ, подписываем договор</p>
-          </div>
-        </div>
-        <div class="col-4 ">
-          <div class="block block-2">
-            <div class="icon icon-2"></div>
-            <div class="h3 title">Предоплата</div>
-            <p>Вносите предоплату в 50%, оставшаяся сумма по факту выполненных работ</p>
-          </div>
-        </div>
-        <div class="col-4 ">
-          <div class="block block-3">
-            <div class="icon icon-3"></div>
-            <div class="h3 title">РЕМОНТ </div>
-            <p>Приступаем к работе через 72 часа. За 3 дня мы формируем команду, закупаем весь материал, доставляем на объект и готовимся к старту работ</p>
-          </div>
-        </div>
-        <div class="col-4 ">
-          <div class="block block-4">
-            <div class="icon icon-4"></div>
-            <div class="h3 title">КОНТАКТ </div>
-            <p>Договариваемся о выезде на объект для замера</p>
-          </div>
-        </div>
-        <div class="col-4 ">
-          <div class="block block-5">
-            <div class="icon icon-5"></div>
-            <div class="h3 title">Замер и обсуждение </div>
-            <p>Замеряем ваш объект, предлагаем варианты решение, составляем смету с выбором материала</p>
-          </div>
-        </div>
-        <div class="col-4 ">
-          <div class="block block-6">
-            <div class="icon icon-6"></div>
-            <div class="h3 title">Завершение ремонта</div>
-            <p>Прием работы, подписание акта выполненных услуг, внесение оставшейся суммы</p>
-          </div>
-        </div>
-      </div>
+      
     </div>
   </div>
   <div class="block_wrap s6">
@@ -488,8 +564,9 @@
             <div class="row">
               <div class="col-5">
                 <div class="h3">Контакты</div>
-                <p><a href="tel:+77078183480">+7 707 818 34 80</a></p>
                 <p><b>Городской</b><br><a href="tel:+77273648359">+7 727 364 83 59</a></p>
+                <!-- <p><b>Карлыгаш</b><br><a href="tel:+77273648359">+7 727 364 83 59</a></p>
+                <p><b>Алмас</b><br><a href="tel:+77273648359">+7 727 364 83 59</a></p> -->
                 <h3>социальные сети</h3>
                 <ul class="social">
                   <li class="in"><a href="https://www.instagram.com/abigroupkz/"></a></li>
@@ -501,7 +578,7 @@
                 <h3>почта</h3>
                 <p><a href="mailto:sales@abigroup.kz">sales@abigroup.kz</a></p>
                 <h3>Как нас найти</h3>
-                <p><b>г. Алматы</b><br>Желтоксан 118, офис 318</p>
+                <p><b>г. Алматы</b><br>проспект Райымбек батыр 496а, офис №409</p>
                 <!-- <p><b>г. Нур-Султан</b><br>р-н Байконыр, ул.Бактыораза Бейсекбаева 15/1, 2 этаж, офис №5</p> -->
               </div>
             </div>
@@ -509,13 +586,15 @@
         </div>
       </div>
     </div>
+    <div class="red-brick"></div>
   </div>
   <div class="block_wrap s7">
     <div class="container">
       <div class="row">
         <div class="col-5">
           <div class="content">
-            <h2>Если у вас есть вопросы, оставляйте заявку и мы вам перезвоним</h2>
+            
+            <h2 class="form-h2">Если у вас есть вопросы, оставляйте заявку и мы вам перезвоним</h2>
             <form action="#" class="form">
               <input type="text" name="name" placeholder="Имя">
               <input type="text" name="phone" placeholder="Номер телефона">
@@ -528,7 +607,7 @@
       </div>
     </div>
   </div>
-  <div class="block_wrap s8">
+  <!-- <div class="block_wrap s8">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -560,7 +639,41 @@
         </div>
       </div>
     </div>
+  </div> -->
+
+  <div class="block_wrap s8">
+    <div class="container owl-theme">
+      <h2 id="our_certificate">Наши сертификаты</h2>
+      <div class="tabs"> 
+        <input id="tab1" type="radio" name="tabs" checked> 
+        <label for="tab1">Сертификаты</label> 
+        <input id="tab2" type="radio" name="tabs"> 
+        <label for="tab2">Рекомендации</label> 
+        <div id="counter"></div>
+        
+        <div id="content1"> 
+          <div class="slider owl-carousel">
+            <img src="img/certificate/1.jpg" alt="cert 1">
+            <img src="img/certificate/2.jpg" alt="cert 2">
+            <img src="img/certificate/3.jpg" alt="cert 3">
+            <img src="img/certificate/4.jpg" alt="cert 4">
+            <img src="img/certificate/5.jpg" alt="cert 5">
+            <img src="img/certificate/6.jpg" alt="cert 6">
+          </div>
+        </div>  
+        <div id="content2"> 
+            <div class="slider owl-carousel">
+              <img src="img/rec/1.jpg" alt="cert 1">
+              <img src="img/rec/2.jpg" alt="cert 2">
+              <img src="img/rec/3.jpg" alt="cert 3">
+              <img src="img/rec/4.jpg" alt="cert 4">
+              <img src="img/rec/5.jpg" alt="cert 5">
+            </div>
+        </div>  
+        </div> 
+    </div>    
   </div>
+
   <div class="footer">
     <div class="container">
       <div class="row">
@@ -619,6 +732,11 @@
     </form>
   </div>
 
+  <div>
+    <a href="https://wa.me/77078183480" target="_blank" class="btn-whatsapp-pulse">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+  </div>
   
     
 <script src="libs/jquery-3.5.1.min.js"></script>
@@ -626,5 +744,6 @@
 <script src="libs/owlcarousel/owl.carousel.min.js"></script>
 <script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
 <script src="js/main.js"></script>
+<script src="https://kit.fontawesome.com/7773dc1cdf.js" crossorigin="anonymous"></script>
 </body>
 </html>

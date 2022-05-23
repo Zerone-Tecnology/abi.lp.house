@@ -2,18 +2,40 @@ $(document).ready(function () {
 	new WOW().init();
 	$('.slider').owlCarousel({
 		nav: true,
-		navText: '',
+		navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
 		items: 1,
+		center: true,
+		onInitialized  : counter, 
+  		onTranslated : counter,
 		responsive: {
 			425: {
-				items: 2,
+				items: 1,
 			},
 			768: {
 				items: 3,
 			},
 			1024: {
-				items: 4
-			}
+				items: 3
+			},
+			
+		}
+	});
+
+	$('.slider-sale').owlCarousel({
+		items: 1,
+		onInitialized  : counter, 
+  		onTranslated : counter,
+		responsive: {
+			425: {
+				items: 1,
+			},
+			768: {
+				items: 2,
+			},
+			1024: {
+				items: 3
+			},
+			
 		}
 	});
 
@@ -57,6 +79,8 @@ $(document).ready(function () {
 		});
 		return false;
 	});
+
+	
 
 	// window.onscroll = function() {fixMMenu()};
 	// var header = document.getElementById("headerTop");
@@ -276,3 +300,42 @@ function burgerMenu(selector) {
   }
   
   burgerMenu('.burger-menu');
+
+  
+  function counter(event) {
+	var element   = event.target;         // DOM element, in this example .owl-carousel
+	 var items     = event.item.count;     // Number of items
+	 var item      = event.item.index + 1;     // Position of the current item
+   
+   // it loop is true then reset counter from 1
+   if(item > items) {
+	 item = item - items
+   }
+   $('#counter').html("<span class='counter-span-1'>0"+item+"</span>"+" / "+"<span class='counter-span-2'>0" +items+"</span>")
+ }
+
+ var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
