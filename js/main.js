@@ -5,6 +5,9 @@ $(document).ready(function () {
 		navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
 		items: 1,
 		center: true,
+		autoplay:true,
+		autoplayTimeout:3000,
+		autoplayHoverPause:false,
 		onInitialized  : counter, 
   		onTranslated : counter,
 		responsive: {
@@ -23,6 +26,11 @@ $(document).ready(function () {
 
 	$('.slider-sale').owlCarousel({
 		items: 1,
+		nav: true,
+		dots: true,
+		autoplay:true,
+		autoplayTimeout:5000,
+		autoplayHoverPause:false,
 		onInitialized  : counter, 
   		onTranslated : counter,
 		responsive: {
