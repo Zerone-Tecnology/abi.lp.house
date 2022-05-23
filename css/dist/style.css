@@ -123,9 +123,12 @@ h3, .h3 {
 }
 
 .header {
-  background-image: url("../img/header_bg.jpg");
+  background-image: url("../img/header_bg-3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+.header h1 span {
+  background: rgba(255, 255, 255, 0.75);
 }
 .header .logo-wrap {
   padding: 15px 0;
@@ -368,6 +371,7 @@ h3, .h3 {
   padding: 15px;
   text-align: center;
   margin-bottom: 15px;
+  min-height: 400px;
 }
 .block_wrap.s3 .block-title {
   border: 0;
@@ -784,6 +788,36 @@ i:first-child:hover {
     opacity: 1;
   }
 }
+.block.block-center ul li {
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.left_b {
+  width: 20%;
+}
+
+.center_b {
+  width: 55%;
+}
+
+.zerone {
+  position: relative;
+  text-align: center;
+  top: 175px;
+}
+.zerone img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.block.block-left .logo {
+  padding-bottom: 10px;
+}
+.block.block-left .copy {
+  padding-top: 10px;
+}
+
 .fa.fa-whatsapp {
   border: none;
   margin: 0 auto;
