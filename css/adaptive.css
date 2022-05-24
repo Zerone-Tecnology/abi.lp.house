@@ -71,11 +71,6 @@
 .owl-theme .owl-nav [class*=owl-]:hover{
   background: transparent;
 }
-
-* {
-    margin: 0;
-    padding: 0;
-  }
   .burger-menu_button {
     position: fixed;
     top: 20px;
@@ -215,54 +210,13 @@
     display: block;
     background-color: rgba(0, 0, 0, 0.5);
   }
-  
-  
-  
-  section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    font-family: sans-serif;
-    font-size: 72px;
-    text-transform: uppercase;
-    color: #000;
-  }
-  
-  #section-1 {
-    background-image: url("https://images.unsplash.com/photo-1551962492-106ff9f68e0a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ");
-    background-size: cover;
-  }
-  
-  #section-2 {
-   background-color: red; 
-   color: #fff;
-  }
-  
-  #section-3 {
-   background-image: url(https://images.unsplash.com/photo-1551656258-7610a70ff3a3?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ); 
-    background-size: cover;
-  }
-  
-  #section-4 {
-   background-color: blue; 
-   color: #fff;
-  }
-  
-  #section-5 {
-   background-image: url(https://images.unsplash.com/photo-1552256203-c5863f355f44?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
-    background-size: cover;
-  }
-
   .burger-menu_button{
     display: none;
 
   }
-
   .sale{
     display: none;
   }
-
 
 /*MEDIA
 ===============================================*/
@@ -270,16 +224,12 @@
     .header .menu-wrap ul li a{
       padding: 10px;
     }
-
     .header .phone-wrap {
         white-space: nowrap;
-
     }
-
     .col-2{
         padding: 0px;
     }
-
     .block_wrap.s2 .block-calc .sum-wrapper{
         display: flex;
         flex-direction: column;
@@ -291,14 +241,13 @@
       position: absolute;
       left: -30%;
       top: 200px;
+    }
   }
-  }
-
   @media (max-width: 1025px){
     .block_wrap.s1 .line-red{
       left: -6%;
     }
-
+    
     .block_wrap.s1 .content{
       padding-left: 80px;
     }
@@ -311,12 +260,10 @@
       border: none;
       margin: 0;
     }
-
     .block_wrap.s1{
       flex: 0 0 70%;
       max-width: 100%;
     }
-
     .offset-3{
       margin-left: 42%;
     }
@@ -325,7 +272,7 @@
       position: absolute;
       left: 50px;
       top: 140px;
-  }
+    }
     .offset-5{
       margin-left: 0;
     }
@@ -333,7 +280,7 @@
   
   @media (max-width: 993px){
       .container{
-          max-width: 900px;
+        max-width: 900px;
       }
   }
 
@@ -368,55 +315,40 @@
       }
 }
 
-
-
 @media (max-width: 820px){
   .header .menu-wrap ul{
     width: 460px  ;
   }
-
   .modal-content .col-4{
     display: block;
     flex: 0 0 100%;
     max-width: 100%;
   }
-
-
-
-  
-
   .block_wrap.s2 .col-12{
     display: flex;
   }
-
   .calculate{
     display: block;
   }
-
   .offset-3{
     margin-left: 30%;
   }
-
   #services{
     text-align: left;
     margin-left: 0px;
   }
-
   .adaptive{
     display: block;
   }
-  
   .col-12 .content h1{
     padding-bottom: 20px;
     padding-top: 60px;
     font-size: 32px;
   }
-
   .menu-wrap{
     margin-top: 100px;
     position: absolute;
   }
-
   .header .phone-wrap{
     position: absolute;
     left: -50%;
@@ -429,35 +361,26 @@
     border: none;
     margin: 0;
   }
-  
-
   .header .row .col-7{
     flex: 0 0 50%;
   }
-
   .block_wrap.s4{
     background-size: 497px 370px;
   }
-
   .block_wrap.s6{
     background-size: 497px 370px;
   }
-
   .block_wrap.s7 .content{
     padding-top: 0px;
     width: 470px;
   }
-
   .block_wrap.s7 .col-5{
     margin: -50px;
-    
   }
-  
   .form-h2{
     font-size: 24px;
     padding-top: 100px;
   }
-
   .form label{
     padding-bottom: 100px;
   }
@@ -505,21 +428,14 @@
   #header-phone{
     display: none;
   }
-
-  
-
-  
-
   .sale{
     display: block;
     padding-top: 100px;
     padding-bottom: 40px;
   }
-
   .text-content{
     text-align: center;
   }
-
   .sale-h1{
     font-family: 'Ubuntu';
     font-style: normal;
