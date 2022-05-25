@@ -396,7 +396,7 @@ h3, .h3 {
   background-position: -160px -150px;
 }
 .block_wrap.s3 .block .icon-4 {
-  background-position: -240px -150px;
+  background-image: url("../img/icon-4.svg");
 }
 .block_wrap.s3 .block .icon-5 {
   background-position: -320px -150px;
