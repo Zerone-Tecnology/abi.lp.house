@@ -135,6 +135,7 @@ h3, .h3 {
 }
 
 .header {
+<<<<<<< HEAD
   background-image: url("../img/header_bg-3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -142,6 +143,11 @@ h3, .h3 {
 
 .header h1 span {
   background: rgba(255, 255, 255, 0.75);
+=======
+  background-image: url("../img/header_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+>>>>>>> 515d17d610217b17cd1a7cf8dfb35d58e5ba26a7
 }
 
 .header .logo-wrap {
@@ -241,6 +247,20 @@ h3, .h3 {
   position: absolute;
   right: 15px;
   top: 15px;
+<<<<<<< HEAD
+=======
+}
+
+.iconz {
+	background-image: url('../img/Component 49.svg');
+	height: 80px;
+	width: 100px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-repeat: no-repeat;
+	margin: 15px auto 25px;
+	background-position: 0px -8px;
+>>>>>>> 515d17d610217b17cd1a7cf8dfb35d58e5ba26a7
 }
 
 .block_wrap.s2 .block.icon-1::after {
@@ -470,7 +490,10 @@ h3, .h3 {
   padding: 15px;
   text-align: center;
   margin-bottom: 15px;
+<<<<<<< HEAD
   min-height: 400px;
+=======
+>>>>>>> 515d17d610217b17cd1a7cf8dfb35d58e5ba26a7
 }
 
 .block_wrap.s3 .block-title {
@@ -667,6 +690,7 @@ h3, .h3 {
 
 .footer ul.social .fb {
   background-position: -263px 0;
+<<<<<<< HEAD
 }
 
 .hidden {
@@ -780,6 +804,121 @@ h3, .h3 {
   background-color: #fff;
 }
 
+=======
+}
+
+.hidden {
+  display: none;
+}
+
+.font-light {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.selector:hover {
+  border: 1px solid #1A1F26 !important;
+  -webkit-transition: border 0.4s linear;
+  transition: border 0.4s linear;
+}
+
+.selector.selected {
+  border: 1px solid #1A1F26 !important;
+  background: #1A1F26 !important;
+  color: #ffffff;
+  -webkit-transition: border, color, backgroud 0.4s linear;
+  transition: border, color, backgroud 0.4s linear;
+}
+
+/*WHY US
+ *================================================= */
+.block_wrap.s1 .content h2, .block_wrap.s1 .content p {
+  padding-bottom: 20px;
+}
+
+.block-title {
+  background-color: #E31E24;
+  color: #fff;
+}
+
+#services {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  max-width: 500px;
+}
+
+.title.h3 {
+  padding-bottom: 20px;
+}
+
+.block_wrap.s2 .block {
+  padding: 30px;
+  padding-bottom: 10px;
+}
+
+.block_wrap.s4 .col-7 {
+  background-color: #1A1F26;
+  padding: 0px;
+  max-width: 500px;
+}
+
+.block_wrap.s4 .content h2 {
+  max-width: 430px;
+  width: 100%;
+  padding-bottom: 25px;
+}
+
+.block_wrap.s4 .content p {
+  padding-bottom: 25px;
+}
+
+.offset-5 {
+  margin-left: 50%;
+}
+
+.content-black {
+  padding-left: 100px;
+  width: 580px;
+}
+
+#contacts {
+  padding-bottom: 50px;
+}
+
+.h3 {
+  padding-bottom: 30px;
+}
+
+.col-5 p {
+  padding-bottom: 26px;
+}
+
+.col-5 h3 {
+  width: 250px;
+}
+
+.block_wrap.s6 {
+  padding-bottom: 0px;
+}
+
+.red-brick {
+  background-color: #E31E24;
+  width: 80%;
+  height: 50px;
+}
+
+.block_wrap.s7 {
+  padding-bottom: 0px;
+}
+
+.block_wrap.s7 .col-5 {
+  background-color: #fff;
+}
+
+>>>>>>> 515d17d610217b17cd1a7cf8dfb35d58e5ba26a7
 .block_wrap.s8 {
   padding-bottom: 300px;
 }
@@ -902,6 +1041,7 @@ i:first-child:hover {
 .tabs input {
   display: none;
 }
+<<<<<<< HEAD
 
 .tabs label {
   font-family: 'Ubuntu';
@@ -1035,3 +1175,68 @@ i:first-child:hover {
   right: 5%;
   z-index: 10;
 }
+=======
+
+.tabs label {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 29px;
+  display: block;
+  width: 180px;
+  padding: 15px;
+  color: #000;
+  cursor: pointer;
+}
+
+.tabs input:checked + label {
+  color: #E31E24;
+}
+
+#tab1:checked ~ #content1, #tab2:checked ~ #content2, #tab3:checked ~ #content3, #tab4:checked ~ #content4 {
+  display: block;
+}
+
+.tabs section {
+  -webkit-animation: scale 0.7s ease-in-out;
+          animation: scale 0.7s ease-in-out;
+}
+
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(1.005);
+            transform: scale(1.005);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(1.005);
+            transform: scale(1.005);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */
+>>>>>>> 515d17d610217b17cd1a7cf8dfb35d58e5ba26a7

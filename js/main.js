@@ -1,4 +1,13 @@
 $(document).ready(function () {
+
+	$('.btn.btn-grey').on('click', function(){
+		gtag('event', 'click', {
+			'event_category': 'Кнопка Whatsapp',
+			'event_label': '',
+			'value': ''
+		});
+	});
+
 	new WOW().init();
 	$('.slider').owlCarousel({
 		nav: true,
