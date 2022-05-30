@@ -1035,3 +1035,27 @@ i:first-child:hover {
   right: 5%;
   z-index: 10;
 }
+
+.form-popup {
+  position: relative;
+  width: 480px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 25px;
+}
+
+.form-popup .title {
+  font-family: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
+  line-height: 1.2em;
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+
+.form-popup .checkbox-wrap .text {
+  display: inline-block;
+}
+
+.form-popup .checkbox-wrap .text a {
+  color: #E31E24;
+}
