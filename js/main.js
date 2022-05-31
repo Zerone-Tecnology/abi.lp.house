@@ -145,9 +145,11 @@ $(document).ready(function () {
 		label.style.background = `#ffffff`;
 		label.innerHTML = value;
 
-		$('.kv-range-gradient')[0].style.background = `linear-gradient(90deg, #1A1F26 ${left * 0.5 + 2}%, rgba(26, 31, 38, 0.23) ${left * 0.5 + 10}%)`;
+		$('.kv-range-gradient')[0].style.background = `linear-gradient(90deg, #1A1F26 ${left * 1.1 + 5}px, rgba(26, 31, 38, 0.23) ${left * 1 + 10}px)`;
 
 	});
+
+	
 
 
 
