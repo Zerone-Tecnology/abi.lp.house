@@ -1,8 +1,16 @@
 $(document).ready(function () {
 
-	$('.btn.btn-grey').on('click', function(){
+	$('.btn-whatsapp-pulse').on('click', function(){
 		gtag('event', 'click', {
-			'event_category': 'Кнопка Whatsapp',
+			'event_category': 'Переход на чат в WA',
+			'event_label': '',
+			'value': ''
+		});
+	});
+
+	$('.fa.fa-phone').on('click', function(){
+		gtag('event', 'click', {
+			'event_category': 'Клик по номеру',
 			'event_label': '',
 			'value': ''
 		});
