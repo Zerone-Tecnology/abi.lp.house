@@ -8,7 +8,7 @@ $(document).ready(function () {
 		});
 	});
 
-	$('.fa.fa-phone').on('click', function(){
+	$('.phone-wrap').on('click', function(){
 		gtag('event', 'click', {
 			'event_category': 'Клик по номеру',
 			'event_label': '',
