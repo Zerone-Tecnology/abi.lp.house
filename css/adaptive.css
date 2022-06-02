@@ -61,7 +61,6 @@
 }
 
 .close {
-  display: none;
   color: #aaa;
   font-size: 28px;
   font-weight: bold;
@@ -75,6 +74,10 @@
 }
 
 .adaptive{
+  display: none;
+}
+
+#modal-button{
   display: none;
 }
 
@@ -129,8 +132,7 @@
     content: '';
     top: 12px;
   }
-  
-  
+
   .burger-menu_active .burger-menu_lines {
     background-color: transparent;
   }
@@ -331,6 +333,7 @@
 }
 
 @media (max-width: 820px){
+
   .header .menu-wrap ul{
     width: 460px  ;
   }
@@ -421,9 +424,6 @@
   .slider-sale{
     width: 700px;
 }
-  .block_wrap.s2{
-    display: none;
-  }
   .col-6{
     flex: 0 0 0;
     max-width: none;
@@ -562,6 +562,16 @@
     }
   }
 
+  @media(max-width: 768px){
+    #modal-button{
+      display: block;
+    }
+
+    .block_wrap.s2 .block-calc:first-child{
+      display: none;
+    }
+  }
+
   @media(max-width: 521px){
     .block_wrap.s4 .content{
       max-width: 490px;
@@ -652,10 +662,6 @@
 
   .block_wrap.s6 .row{
     justify-content: center;
-  }
-  .block_wrap.s2 .block{
-    width: 270px;
-    padding: 20px;
   }
   .block_wrap.s5 .block{
     margin-top: 10px;
@@ -911,6 +917,11 @@
 }
 }
 @media (max-width: 426px){
+  .owl-carousel .owl-stage-outer{
+    width: 100%;
+    max-width: 425px;
+  }
+
 
   .sale-h1, .sale-p, .sale-time{
     max-width: 300px;

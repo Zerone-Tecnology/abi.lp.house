@@ -355,7 +355,7 @@ h3, .h3 {
   cursor: pointer;
 }
 
-.block_wrap.s2 .block-calc .range-wrapper .kv-range-gradient {
+.block_wrap.s2 .block-calc .range-wrapper .range-gradient {
   pointer-events: none;
   position: absolute;
   top: 14px;

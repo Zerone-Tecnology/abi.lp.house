@@ -24,28 +24,37 @@ $(document).ready(function () {
 		}
 	});
 
-	$('.slider-sale').owlCarousel({
-		items: 1,
-		nav: true,
-		dots: true,
-		autoplay:true,
-		autoplayTimeout:5000,
-		autoplayHoverPause:false,
-		onInitialized  : counter, 
-  		onTranslated : counter,
-		responsive: {
-			425: {
+	$(window).on('resize', function(){
+		if($(window).width() <= 768) {
+		$('.slider-sale').addClass('owl-carousel');
+			$('.slider-sale').owlCarousel({
 				items: 1,
-			},
-			768: {
-				items: 2,
-			},
-			1024: {
-				items: 3
-			},
-			
+				nav: true,
+				dots: true,
+				autoplay:true,
+				autoplayTimeout:5000,
+				autoplayHoverPause:false,
+				onInitialized  : counter, 
+				onTranslated : counter,
+				responsive: {
+					425: {
+						items: 1,
+					},
+					768: {
+						items: 2,
+					},
+					1024: {
+						items: 3
+					},
+					
+				},
+				
+			});
 		}
-	});
+		 else {
+		$('.slider-sale').removeClass('owl-carousel');
+		}
+		}).trigger('resize');
 
 	$('.popup').magnificPopup({
 		type: 'inline',
@@ -121,39 +130,34 @@ $(document).ready(function () {
 
 
 
-	// Отрисовка ползунка в "ОНЛАЙН КАЛЬКУЛЯТОР"
-	const range = document.getElementById("kv-range");
+	const range = document.querySelectorAll(".kv-range");
 	// Отрисовка ползунка в "ОНЛАЙН КАЛЬКУЛЯТОР"
 	const scale = (num, in_min, in_max, out_min, out_max) => {
 		return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
 	};
 	// Отрисовка ползунка в "ОНЛАЙН КАЛЬКУЛЯТОР"
-	range.addEventListener("input", (e) => {
-		const value = +e.target.value;
-		const label = e.target.nextElementSibling;
-		const rangeWidth = getComputedStyle(e.target).getPropertyValue("width");
-		const labelWidth = getComputedStyle(label).getPropertyValue("width");
-		// remove px
-		const numWidth = +rangeWidth.substring(0, rangeWidth.length - 2);
-		const numLabelWidth = +labelWidth.substring(0, labelWidth.length - 2);
-		const max = +e.target.max;
-		const min = +e.target.min;
-		const left =
-			value * (numWidth / max) -
-			numLabelWidth / 2;
-		label.style.left = `${left - 15}px`;
-		label.style.background = `#ffffff`;
-		label.innerHTML = value;
-
-		$('.kv-range-gradient')[0].style.background = `linear-gradient(90deg, #1A1F26 ${left * 1.1 + 5}px, rgba(26, 31, 38, 0.23) ${left * 1 + 10}px)`;
-
+	Object.keys(range).forEach(key => {
+		range[key].addEventListener("input", (e) => {
+			const value = +e.target.value;
+			const label = e.target.nextElementSibling;
+			const rangeWidth = getComputedStyle(e.target).getPropertyValue("width");
+			const labelWidth = getComputedStyle(label).getPropertyValue("width");
+			// remove px
+			const numWidth = +rangeWidth.substring(0, rangeWidth.length - 2);
+			const numLabelWidth = +labelWidth.substring(0, labelWidth.length - 2);
+			const max = +e.target.max;
+			const min = +e.target.min;
+			const left =
+				value * (numWidth / max) -
+				numLabelWidth / 2;
+			label.style.left = `${left - 15}px`;
+			label.style.background = `#ffffff`;
+			label.innerHTML = value;
+			e.target.value = label.innerHTML;
+			$('.range-gradient')[key].style.background = `linear-gradient(90deg, #1A1F26 ${left * 1.3 - 110}px, rgba(26, 31, 38, 0.23) ${left * 1 + 10}px)`;
+		});
 	});
-
 	
-
-
-
-
 
 	// Отрисовка результата в "ОНЛАЙН КАЛЬКУЛЯТОР"
 	const calculate = {
@@ -177,8 +181,7 @@ $(document).ready(function () {
 		},
 
 		getWork(number) {
-			console.log(this.work.find(w => w.number === number))
-			return this.work.find(w => w.number === number)
+			return this.work.find(w => w.number === number) 
 		},
 
 		draw(price) {
@@ -219,7 +222,7 @@ $(document).ready(function () {
 		calculate.set(kv_value, 1);
 	})
 	// Отрисовка результата в "ОНЛАЙН КАЛЬКУЛЯТОР"
-	$('#kv-range').on('input', function () {
+	$('.kv-range').on('input', function () {
 		$('.kv-selector.selected').removeClass('selected')
 		$('.opt-selector.selected').removeClass('selected')
 		calculate.set($(this).val(), 1);
@@ -236,7 +239,11 @@ $(document).ready(function () {
 		}
 	})
 
+	
+
 });
+
+
 
 $(function() {
     var owl = $('.slider-card'),
@@ -260,13 +267,6 @@ $(function() {
 					}
 				}
         };
-
-    if ( $(window).width() < 770 ) {
-        var owlActive = owl.owlCarousel(owlOptions);
-    } else {
-        owl.addClass('off');
-    }
-
     $(window).resize(function() {
         if ( $(window).width() < 770 ) {
             if ( $('.owl-carousel').hasClass('off') ) {
@@ -324,10 +324,10 @@ function burgerMenu(selector) {
    $('#counter').html("<span class='counter-span-1'>0"+item+"</span>"+" / "+"<span class='counter-span-2'>0" +items+"</span>")
  }
 
- var modal = document.getElementById("myModal");
+ var modal = document.getElementById("Modal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("modal-button");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -349,3 +349,5 @@ window.onclick = function(event) {
   }
 }
 
+
+$('.block-calc').clone(true).unwrap().appendTo('.modal-content');
