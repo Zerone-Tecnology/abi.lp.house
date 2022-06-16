@@ -1038,7 +1038,7 @@ i:first-child:hover {
 
 .form-popup {
   position: relative;
-  width: 480px;
+  width: 100%;
   margin: 0 auto;
   background-color: #fff;
   padding: 25px;
