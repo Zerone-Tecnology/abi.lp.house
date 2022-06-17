@@ -302,3 +302,38 @@ window.onclick = function(event) {
   }
 }
 
+// АКЦИЯ
+let date = new Date('June 3 2022 00:00:00');
+
+function counts(){
+let now = new Date();
+let curDay = now.getDate();
+let statDay = date.getDate();
+let temp = curDay - statDay;
+// console.log(temp);
+if (temp >= 4) {
+  date.setDate(curDay + 3);
+  date.setMonth(now.getMonth());
+  date.setFullYear(now.getFullYear());
+}
+let gap  = date - now;
+// console.log(curDay);
+
+  let days = Math.floor(gap / 1000 / 60 / 60 / 24);
+  let hours = Math.floor(gap / 1000 / 60 / 60) % 24;
+  let minutes = Math.floor(gap / 1000 / 60) % 60;
+  let seconds = Math.floor(gap / 1000) % 60;
+  if (gap < 0) {
+  days += 3;
+  hours = hours + 24;
+  minutes = minutes + 60;	
+  seconds = seconds + 60;
+  } 
+  document.getElementById('d').innerText = days;
+  document.getElementById('h').innerText = hours;
+  document.getElementById('m').innerText = minutes;
+  document.getElementById('s').innerText = seconds;
+}
+counts();
+
+setInterval(counts, 1000);

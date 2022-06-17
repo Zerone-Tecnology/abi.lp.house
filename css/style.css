@@ -1059,3 +1059,19 @@ i:first-child:hover {
 .form-popup .checkbox-wrap .text a {
   color: #E31E24;
 }
+
+.block.b-hour {
+  display: inline-block;
+  width: 20%;
+  margin-left: 5px;
+  padding: 20px 0px;
+  background-color: #d5d9de;
+}
+.block.b-hour b {
+  font-size: 20px;
+  font-weight: 700;
+}
+.block.b-hour p {
+  margin: 0;
+  font-size: 15px;
+}
