@@ -822,6 +822,11 @@ h3, .h3 {
 }
 
 .fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
   margin-right: 30px;
 }
 
@@ -835,7 +840,7 @@ i {
 
 i:first-child:hover {
   color: #fff;
-  background-color: red;
+  background-color: unset;
 }
 
 .block_wrap.s8 h2 {
@@ -1001,7 +1006,10 @@ i:first-child:hover {
   border: none;
   margin: 0 auto;
 }
-
+.btn-whatsapp-pulse {
+  top: 75%;
+  right: 15%;
+}
 .btn-whatsapp-pulse {
   background: #25d366;
   color: white;
@@ -1034,6 +1042,35 @@ i:first-child:hover {
   top: 70%;
   right: 5%;
   z-index: 10;
+}
+.btn-phon-pulse {
+	top: 75%;
+	right: 15%;
+}
+.btn-phon-pulse {
+background: #cebebe;
+position: fixed;
+bottom: 20px;
+right: 20px;
+font-size: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 0;
+height: 0;
+padding: 30px;
+text-decoration: none;
+border-radius: 50%;
+animation-name: pulse;
+animation-duration: 1.5s;
+animation-timing-function: ease-out;
+animation-iteration-count: infinite;
+top: 82%;
+right: 5%;
+z-index: 10;
+}
+.btn-phon-pulse-img {
+width: 35px;
 }
 
 .form-popup {
