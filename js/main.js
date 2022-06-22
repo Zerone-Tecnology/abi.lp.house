@@ -312,7 +312,7 @@ let statDay = date.getDate();
 let temp = curDay - statDay;
 // console.log(temp);
 if (temp >= 4) {
-  date.setDate(curDay + 3);
+  date.setDate(curDay + 4);
   date.setMonth(now.getMonth());
   date.setFullYear(now.getFullYear());
 }
